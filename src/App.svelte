@@ -62,12 +62,7 @@
                     We're having trouble connecting to the server right now. This could be due to maintenance or technical issues.
                     <br class=" " />
                     <br class=" " />
-                    <a
-                        class="font-semibold underline"
-                        href=""
-                        target="_blank"
-                        >View server logs</a
-                    >
+                    Please wait
                     or
                     <a
                         class="font-semibold underline"
