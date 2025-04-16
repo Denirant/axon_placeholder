@@ -8,8 +8,8 @@
     import logo from './assets/favicon.ico'
   </script>
   
-  <div class="loader-container relative pulse-animation" style="width: {size}px; height: {size}px;">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <div class="loader-container relative" style="width: {size}px; height: {size}px;">
+    <svg viewBox="0 0 100 100" class="pulse-animation" xmlns="http://www.w3.org/2000/svg">
       <!-- Background circle -->
       <circle
         cx="50"
@@ -36,7 +36,7 @@
     </svg>
 
 
-    <img src={logo} class="w-[30px] h-[30px] absolute top-[10px] left-[10px] pulse-animation">
+    <img src={logo} class="w-[30px] h-[30px] absolute top-[10px] left-[10px]">
   </div>
 
   
@@ -48,10 +48,10 @@
 
   @keyframes pulse {
     0%, 100% {
-      opacity: 0.4;
+      opacity: 0.6;
     }
     80% {
-      opacity: 0.8;
+      opacity: 0.95;
     }
   }
 
