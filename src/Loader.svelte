@@ -1,8 +1,8 @@
 <script>
     export let size = 100;
     export let strokeWidth = 4;
-    export let primaryColor = "#fff";
-    export let accentColor = "#101010";
+    export let primaryColor = "#151515";
+    export let accentColor = "#f2f2f2";
     
     import LogoIcon from './assets/favicon.svg';
     
@@ -15,7 +15,7 @@
         return localStorage.length > 0;
     };
     
-    const delay = hasLocalStorage() ? 0 : 2000;
+    const delay = hasLocalStorage() ? 0 : 4000;
     const subDelay = hasLocalStorage() ? 0 : 100;
 
     setTimeout(() => {
@@ -125,10 +125,10 @@
     
     .logo-image {
         position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 40px;
-        height: 40px;
+        top: 31px;
+        left: 31px;
+        width: 38px;
+        height: 38px;
         transition: all .2s ease-in-out;
         z-index: 10;
     }
