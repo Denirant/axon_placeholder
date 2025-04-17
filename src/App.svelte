@@ -2,7 +2,7 @@
   import Loader from "./Loader.svelte";
   import { onMount } from 'svelte';
   
-  let backgroundColor = "white";
+  let backgroundColor = "#151515";
   
   // Removed localStorage.clear() to preserve existing localStorage items
   
@@ -45,7 +45,7 @@
   });
 </script>
 
-<div class="flex justify-center items-center w-screen h-screen border app-container"
+<div class="flex justify-center items-center w-screen h-screen border app-container safe-area-inset"
      style="background-color: {backgroundColor}">
   <Loader />
 </div>
@@ -55,9 +55,22 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #151515; /* Устанавливаем тот же цвет фона, что и в приложении */
+  }
+  
+  :global(html) {
+    height: 100%;
+    background-color: #151515;
   }
   
   .app-container {
-    transition: background-color .25s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .safe-area-inset {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 </style>
