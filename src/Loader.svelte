@@ -10,13 +10,21 @@
     let containerSize = size;
     let backgroundColor = "transparent";
 
+    // Check if localStorage has any items and set delay accordingly
+    const hasLocalStorage = () => {
+        return localStorage.length > 0;
+    };
+    
+    const delay = hasLocalStorage() ? 0 : 2000;
+    const subDelay = hasLocalStorage() ? 0 : 100;
+
     setTimeout(() => {
         isVisible = false;
         backgroundColor = "#212121";
         setTimeout(() => {
             containerSize = 100; 
-        }, 100);
-    }, 2000);
+        }, subDelay);
+    }, delay);
 </script>
 
 <div class="loader-wrapper">
