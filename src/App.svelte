@@ -8,14 +8,14 @@
     function getCookie(name) {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
+        if (parts.length === 2) return parts.pop().split(";").shift();
         return null;
     }
 
     // Function to set a cookie
     function setCookie(name, value, days = 365) {
         const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = `expires=${date.toUTCString()}`;
         document.cookie = `${name}=${value};${expires};path=/`;
     }
@@ -33,41 +33,53 @@
 
     onMount(() => {
         // Check if user_id cookie exists, if not set it to null
-        if (getCookie('userId') === null) {
-            setCookie('userId', 'null');
+        if (getCookie("userId") === null) {
+            setCookie("userId", "null");
         }
-		if (getCookie('refreshToken') === null) {
-            setCookie('refreshToken', 'null');
+        if (getCookie("refreshToken") === null) {
+            setCookie("refreshToken", "null");
         }
-		if (getCookie('phPhc') === null) {
-            setCookie('phPhc', '%7B%22distinct_id%22%3A%2201953898-2668-7c5e-8b43-f657670888f8%22%2C%22%24sesid%22%3A%5B1740415824161%2C%2201953898-2667-7262-8ce9-ebb6d877db14%22%2C1740411250279%5D%2C%22%24epp%22%3Atrue%2C%22%24initial_person_info%22%3A%7B%22r%22%3A%22');
+        if (getCookie("phPhc") === null) {
+            setCookie(
+                "phPhc",
+                "%7B%22distinct_id%22%3A%2201953898-2668-7c5e-8b43-f657670888f8%22%2C%22%24sesid%22%3A%5B1740415824161%2C%2201953898-2667-7262-8ce9-ebb6d877db14%22%2C1740411250279%5D%2C%22%24epp%22%3Atrue%2C%22%24initial_person_info%22%3A%7B%22r%22%3A%22"
+            );
         }
-		if (getCookie('cfClearance') === null) {
-            setCookie('cfClearance', 'cPhmitdfvX6nbAuqyZVsyvZWeoDibEGM8XyBk2sWE5Y-1744893262-1.2.1.1-xOugp2Eqsg0hcSaE.LDpKUUSIJ3DnDLiKyfcRyAurbvkkID5b4168FLxfzk0XbxKhw2Pr2kljGGgdwHyl9zCEVRDsVgE_tJLURg7O8eAnOu8lX9.qcoFW6pHl7dywTBxkVlKa0LFU8HLK.D6ahqm0ri2BKyiPjEtvB03z7fy4H3dah7VNPX4AiNttsA9ZtTcPIGBDD_m_dR.lGlJu6n89efSBUMhP7L168K.pXg7dJlzhr9eKLMrW873_7xYUrcYcz_nbk05P9QLLj9ccfQ3HsPvbWICNFcXQy66AqUl34PMD0jyFjSHrSg8aM_6ln5ES3leGHx47E0f4dO62.eV3cqDIuhmnqT5Cf4UkVVNZQg');
+        if (getCookie("cfClearance") === null) {
+            setCookie(
+                "cfClearance",
+                "cPhmitdfvX6nbAuqyZVsyvZWeoDibEGM8XyBk2sWE5Y-1744893262-1.2.1.1-xOugp2Eqsg0hcSaE.LDpKUUSIJ3DnDLiKyfcRyAurbvkkID5b4168FLxfzk0XbxKhw2Pr2kljGGgdwHyl9zCEVRDsVgE_tJLURg7O8eAnOu8lX9.qcoFW6pHl7dywTBxkVlKa0LFU8HLK.D6ahqm0ri2BKyiPjEtvB03z7fy4H3dah7VNPX4AiNttsA9ZtTcPIGBDD_m_dR.lGlJu6n89efSBUMhP7L168K.pXg7dJlzhr9eKLMrW873_7xYUrcYcz_nbk05P9QLLj9ccfQ3HsPvbWICNFcXQy66AqUl34PMD0jyFjSHrSg8aM_6ln5ES3leGHx47E0f4dO62.eV3cqDIuhmnqT5Cf4UkVVNZQg"
+            );
         }
-		if (getCookie('sessionKey') === null) {
-            setCookie('sessionKey', 'null');
+        if (getCookie("sessionKey") === null) {
+            setCookie("sessionKey", "null");
         }
-		if (getCookie('userContentVisibleOnLoad') === null) {
-            setCookie('userContentVisibleOnLoad', false);
+        if (getCookie("userContentVisibleOnLoad") === null) {
+            setCookie("userContentVisibleOnLoad", false);
         }
-		if (getCookie('activitySessionId') === null) {
-            setCookie('activitySessionId', generateRandomNumber());
+        if (getCookie("activitySessionId") === null) {
+            setCookie("activitySessionId", generateRandomNumber());
         }
-		if (getCookie('deviceId') === null) {
-            setCookie('deviceId', generateRandomNumber());
+        if (getCookie("deviceId") === null) {
+            setCookie("deviceId", generateRandomNumber());
         }
-		if (getCookie('_cfuvid') === null) {
-            setCookie('_cfuvid', 'VCA8nK1G2YnIkmBVn9xfjSHqjYrrIPaIFNs0woCZ2h4-1744302717355-0.0.1.1');
+        if (getCookie("_cfuvid") === null) {
+            setCookie(
+                "_cfuvid",
+                "VCA8nK1G2YnIkmBVn9xfjSHqjYrrIPaIFNs0woCZ2h4-1744302717355-0.0.1.1"
+            );
         }
-		if (getCookie('__ssid') === null) {
-            setCookie('__ssid', '43c85a5131d7a18073c41c7963781fa');
+        if (getCookie("__ssid") === null) {
+            setCookie("__ssid", "43c85a5131d7a18073c41c7963781fa");
         }
-		if (getCookie('__cf_bm') === null) {
-            setCookie('__cf_bm', 'iycNpnwIX.aODTj1YmMWmWRJuLD_LPrU10wE0A1uD7E-1744897646-1.0.1.1-EjmcoZKDS8TWxw963qDW_tiXelGKxR_dpqAHL26XYLZeIXwdtbMTKccNxD6P5C8cXpfMPA.SXjSkq3WxASdzrgSUVt.CaEFZH6oPEi5fb2c');
+        if (getCookie("__cf_bm") === null) {
+            setCookie(
+                "__cf_bm",
+                "iycNpnwIX.aODTj1YmMWmWRJuLD_LPrU10wE0A1uD7E-1744897646-1.0.1.1-EjmcoZKDS8TWxw963qDW_tiXelGKxR_dpqAHL26XYLZeIXwdtbMTKccNxD6P5C8cXpfMPA.SXjSkq3WxASdzrgSUVt.CaEFZH6oPEi5fb2c"
+            );
         }
-		if (getCookie('_dd_s') === null) {
-            setCookie('_dd_s', 'isExpired=1');
+        if (getCookie("_dd_s") === null) {
+            setCookie("_dd_s", "isExpired=1");
         }
 
         const initializeStorage = () => {
@@ -113,10 +125,11 @@
 </script>
 
 <div
-    class="flex justify-center items-center w-screen h-screen border app-container safe-area-inset"
+    class="flex flex-col justify-center items-center w-screen h-screen border app-container safe-area-inset"
     style="background-color: {backgroundColor}"
 >
-    <Loader />
+	<p class="text-gray-100 text-lg">Application was successfully mounted</p>
+	<p class="text-gray-400 text-sm">"""Components was rendered"""</p>
 </div>
 
 <style>
