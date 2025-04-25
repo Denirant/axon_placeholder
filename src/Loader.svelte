@@ -28,7 +28,7 @@
 </script>
 
 <div class="loader-wrapper">
-    <div class="loader-container relative transition-all duration-400" 
+    <div class="loader-container relative transition-all duration-400 m-auto" 
          style="width: {containerSize}px; height: {containerSize}px; overflow: visible;">
         {#if isVisible}
             <svg viewBox="0 0 100 100" class="pulse-animation" xmlns="http://www.w3.org/2000/svg">
@@ -64,6 +64,10 @@
             alt="Logo"
         >
     </div>
+
+    {#if !isVisible}
+        <p class="text-center w-84 text-gray-300 mt-5">System: All services are operational. Backend is functioning normally.</p>
+    {/if}
 </div>
 
 <style>

@@ -128,8 +128,8 @@
     class="flex flex-col justify-center items-center w-screen h-screen border app-container safe-area-inset"
     style="background-color: {backgroundColor}"
 >
-	<p class="text-gray-100 text-lg">Application was successfully mounted</p>
-	<p class="text-gray-400 text-sm">"""Components was rendered"""</p>
+	<!-- <p class="text-gray-100 text-lg">Backend</p> -->
+    <Loader/>
 </div>
 
 <style>
